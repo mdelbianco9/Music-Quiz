@@ -272,32 +272,113 @@ button1.addEventListener("click", function() {
 		// Puts div 3 on page
 		document.body.appendChild(three);
 
-		// Create button to go to question 4--------------------------BeGinInG OF NExT ButTOn
+		// Create button to go to question 4--------------------------BeGinInG OF NExT ButTOn 3
 		var button3 = document.createElement('button');
 		// Put button1 into the first HTML div
 		three.appendChild(button3);
 		button3.className = 'btn btn-lg';
-		// PUT DIV TWO ON TO PAGE
-		document.body.appendChild(three);
 
-		// Add event listener to button so when clicked on it makes question 2------IMPORTANT LINE	
-		// Put a button to go to CREATE BUTTON 3-------------------------BUTTON 2------------
+		// Add event listener to button so when clicked on it makes question 4------IMPORTANT LINE	
+		// Put a button to go to CREATE BUTTON 3-------------------------BUTTON 3------------
 		button3.addEventListener("click", function() {
-		// Checks to see if the correct radio is checked then adds a 1 to the array, or a 0 if its not checked. 
-		if (label5_input.checked) {
-			console.log('Radio 6 is working');
-			// Adds a 1 to the array if the answer is write
-			score.push(1);
-			console.log(score);
-		} else {
-			console.log('wrong answer');
-			score.push(0);
-		};
+			// Checks to see if the correct radio is checked then adds a 1 to the array, or a 0 if its not checked. 
+			if (label5_input.checked) {
+				console.log('Radio 6 is working');
+				// Adds a 1 to the array if the answer is write
+				score.push(1);
+				console.log(score);
+			} else {
+				console.log('wrong answer');
+				score.push(0);
+			}
+			// Creates a div for question3
+			var four = document.createElement('div');
+			// Gives question 2 an ID to be
+			four.id = 'question3';
+			// Creates an h1 to be put iside the div for question2
+			var q4 = document.createElement('h1');
+			// Class name for the h1 to style with CSS
+			q4.className = 'imagine';
+			var q4text = document.createTextNode("4. Famous Rock artist Jimi Hendrix name is actually Johnny Hendrix.")
+			// Append the h1 elmement into the question2 div
+			four.appendChild(q4);
+			// Append text into the h1
+			q4.appendChild(q4text);
+
+			// Create a div element with all the labels in it
+			var lildiv_Q4 = document.createElement('div');
+			lildiv_Q4.className = 'lildiv_Q4';
+
+			// ---------------------------------------------CREATE LABEL 9------True
+			// This is necissary for BS ro work
+			var radio9 = document.createElement('div');
+			// BS class
+			radio9.className = 'radio';
+			var label9 = document.createElement('label');
+			// Text node for label
+			var label9_text = document.createTextNode('True');
+			// Create an input element with type = radio
+			var label9_input = document.createElement('INPUT');
+			label9_input.setAttribute("type", "radio");
+			label9_input.setAttribute("name", "optradio");
+			// Put label into Radio div
+			radio9.appendChild(label9);
+			// Put label_input into label1
+			label9.appendChild(label9_input);
+			// Put textnode into label
+			label9.appendChild(label9_text);
+			// Put label into lil div 3
+			lildiv_Q4.appendChild(radio9);
+
+			// ---------------------------------------------CREATE LABEL 10------False
+			// This is necissary for BS ro work
+			var radio10 = document.createElement('div');
+			// BS class
+			radio10.className = 'radio';
+			var label10 = document.createElement('label');
+			// Text node for label
+			var label10_text = document.createTextNode('False');
+			// Create an input element with type = radio
+			var label10_input = document.createElement('INPUT');
+			label10_input.setAttribute("type", "radio");
+			label10_input.setAttribute("name", "optradio");
+			// Put label into Radio div
+			radio10.appendChild(label10);
+			// Put label_input into label1
+			label10.appendChild(label10_input);
+			// Put textnode into label
+			label10.appendChild(label10_text);
+			// Put label into lil div 3
+			lildiv_Q4.appendChild(radio10);
+
+			// puts label into lil div 3
+			four.appendChild(lildiv_Q4);
+			// PUT DIV FOUR ON TO PAGE
+			document.body.appendChild(four);
+
+			// Create button to go to question 5--------------------------BeGinInG OF NExT ButTOn 4
+			var button4 = document.createElement('button');
+			// Put button1 into the first HTML div
+			four.appendChild(button4);
+			button4.className = 'btn btn-lg';
+			// Add event listener to button so when clicked on it makes question 5------IMPORTANT LINE	
+			// Put a button to go to CREATE BUTTON 4-------------------------BUTTON 4------------
+			button4.addEventListener("click", function() {
+				// Checks to see if the correct radio is checked then adds a 1 to the array, or a 0 if its not checked. 
+				if (label9_input.checked) {
+					console.log('Radio 9 is working');
+					// Adds a 1 to the array if the answer is write
+					score.push(1);
+					console.log(score);
+				} else {
+					console.log('wrong answer');
+					score.push(0);
+				}
 
 
 
-	
-
+				// END FOR THE FOURTH AddEventListener--BUTTON 4
+			});
 		//---- END FOR THE THIRD AddEventListener--BUTTON 3
 		});
 	// ----- END FOR THE SECOND AddEventListener--BUTTON 2
