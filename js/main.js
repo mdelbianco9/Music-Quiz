@@ -434,7 +434,7 @@ button1.addEventListener("click", function() {
 					// --CLASS--
 					q6.className = 'bob';
 					// --TEXT--
-					var q6text = document.createTextNode("6. Who sings these lyrics:")
+					var q6text = document.createTextNode("6. Who sung these lyrics:")
 					// --H3--holds the lyrics
 					var q6_h3 = document.createElement('h3');
 					q6_h3.className = 'lyrics';
@@ -651,8 +651,219 @@ button1.addEventListener("click", function() {
 							console.log('wrong answer');
 							score.push(0);
 							}
+							// Creates a div for question8
+							var eight = document.createElement('div');
+							// --ID-- 
+							eight.id = 'question8';
+						    
+							// --H1--
+							var q8 = document.createElement('h1');
+							// --CLASS--
+							q8.className = 'cobain';
+							// --TEXT--
+							var q8text = document.createTextNode('8. Who killed Kurt Cobain?')
+							// Append the h1 elmement into the question2 div
+							eight.appendChild(q8);
+							// Append text into the h1
+							q8.appendChild(q8text);
 
+							// --INPUT--
+							var input3 = document.createElement("INPUT");
+							input3.setAttribute("type", "text");
+							// Giving input BS class to style
+							input3.className = 'form-control';
+							// Put the input box into the HTML div
+							eight.appendChild(input3);
 
+							// Puts question 5 into the body. 
+							document.body.appendChild(eight);
+
+							// Create button to go to question 9--------------------------BeGinInG OF NExT ButTOn 8
+							var button8 = document.createElement('button');
+							// Put button5 into the first HTML div
+							eight.appendChild(button8);
+							button8.className = 'btn btn-lg';
+							button8.addEventListener('click', function() {
+								if (input3.value.toLowerCase() == "kurt cobain") {
+									console.log("correct answer, kurt");
+									score.push(1);
+								} else {
+										console.log("wrog answer");
+										score.push(0);
+								}
+								// Creates a div for question3
+								var nine = document.createElement('div');
+								// Gives question 2 an ID to be
+								nine.id = 'question9';
+								// Creates an h1 to be put iside the div for question2
+								var q9 = document.createElement('h1');
+								// Class name for the h1 to style with CSS
+								q9.className = 'drake';
+								var q9text = document.createTextNode('9. Who was the top listened to artist in 2016?')
+								// Append the h1 elmement into the question2 div
+								nine.appendChild(q9);
+								// Append text into the h1
+								q9.appendChild(q9text);
+
+								// --------------------------------MULTI CHOICE INPUTS FOR QUESTION 9
+
+								// Create a div element with all the labels in it
+								var lildiv_Q9 = document.createElement('div');
+								lildiv_Q9.className = 'lildiv_Q9';
+
+								// ---------------------------------------------------CREATE LABEL 17------
+								// This is necissary for BS ro work
+								var radio17 = document.createElement('div');
+								// BS class
+								radio17.className = 'radio';
+								var label17 = document.createElement('label');
+								// Text node for label
+								var label17_text = document.createTextNode('Justin Beiber');
+								// Create an input element with type = radio
+								var label17_input = document.createElement('INPUT');
+								label17_input.setAttribute("type", "radio");
+								label17_input.setAttribute("name", "optradio");
+								// Put label into Radio div
+								radio17.appendChild(label17);
+								// Put label_input into label9
+								label17.appendChild(label17_input);
+								// Put textnode into label
+								label17.appendChild(label17_text);
+								// Put label into lil div 9
+								lildiv_Q9.appendChild(radio17);
+
+								// ---------------------------------------------CREATE LABEL 18------
+								// This is necissary for BS ro work
+								var radio18 = document.createElement('div');
+								// BS class
+								radio18.className = 'radio';
+								var label18 = document.createElement('label');
+								// Text node for label
+								var label18_text = document.createTextNode('Drake');
+								// Create an input element with type = radio
+								var label18_input = document.createElement('INPUT');
+								label18_input.setAttribute("type", "radio");
+								label18_input.setAttribute("name", "optradio");
+								// Put label into Radio div
+								radio18.appendChild(label18);
+								// Put label_input into label9_input
+								label18.appendChild(label18_input);
+								// Put textnode into label
+								label18.appendChild(label18_text);
+								// Put label into lil div 9
+								lildiv_Q9.appendChild(radio18);
+					
+								// ---------------------------------------------CREATE LABEL 19------
+								// This is necissary for BS ro work
+								var radio19 = document.createElement('div');
+								// BS class
+								radio19.className = 'radio';
+								var label19 = document.createElement('label');
+								// Text node for label
+								var label19_text = document.createTextNode('Katy Perry');
+								// Create an input element with type = radio
+								var label19_input = document.createElement('INPUT');
+								label19_input.setAttribute("type", "radio");
+								label19_input.setAttribute("name", "optradio");
+								// Put label into Radio div
+								radio19.appendChild(label19);
+								// Put label_input into label9
+								label19.appendChild(label19_input);
+								// Put textnode into label
+								label19.appendChild(label19_text);
+								// Put label into lil div 9
+								lildiv_Q9.appendChild(radio19);
+
+								// ---------------------------------------------CREATE LABEL 20------
+								// This is necissary for BS ro work
+								var radio20 = document.createElement('div');
+								// BS class
+								radio20.className = 'radio';
+								var label20 = document.createElement('label');
+								// Text node for label
+								var label20_text = document.createTextNode('Jay-Z');
+								// Create an input element with type = radio
+								var label20_input = document.createElement('INPUT');
+								label20_input.setAttribute("type", "radio");
+								label20_input.setAttribute("name", "optradio");
+								// Put label into Radio div
+								radio20.appendChild(label20);
+								// Put label_input into label1
+								label20.appendChild(label20_input);
+								// Put textnode into label
+								label20.appendChild(label20_text);
+								// Put label into lil div 3
+								lildiv_Q9.appendChild(radio20);
+
+								// puts label into lil div 9
+								nine.appendChild(lildiv_Q9);
+								// Puts div 3 on page
+								document.body.appendChild(nine);
+
+								// Create button to go to question 10--------------------------BeGinInG OF NExT ButTOn 9
+								var button9 = document.createElement('button');
+								// Put button5 into the first HTML div
+								nine.appendChild(button9);
+								button9.className = 'btn btn-lg';
+								button9.addEventListener('click', function() {
+									if (label18_input.checked) {
+									console.log('Radio 18 is working, Drake');
+									// Adds a 1 to the array if the answer is write
+									score.push(1);
+									console.log(score);
+									} else {
+									console.log('wrong answer');
+									score.push(0);
+									}
+									// Creates a div for question8
+									var ten = document.createElement('div');
+									// --ID-- 
+									ten.id = 'question8';
+								    
+									// --H1--
+									var q10 = document.createElement('h1');
+									// --CLASS--
+									q10.className = 'favorite';
+									// --TEXT--
+									var q10text = document.createTextNode('10. What is your favorite musical album?')
+									// Append the h1 elmement into the question2 div
+									ten.appendChild(q10);
+									// Append text into the h1
+									q10.appendChild(q10text);
+
+									// --INPUT--
+									var input4 = document.createElement("INPUT");
+									input4.setAttribute("type", "text");
+									// Giving input BS class to style
+									input4.className = 'form-control';
+									// Put the input box into the HTML div
+									ten.appendChild(input4);
+
+									// Puts question 5 into the body. 
+									document.body.appendChild(ten);
+
+									// Create button to SUBMIT quiz--------------------------SUBMIT BUTTON
+									var submit = document.createElement('button');
+									// Put button5 into the first HTML div
+									ten.appendChild(submit);
+									submit.className = 'btn btn-lg';
+									submit.addEventListener('click', function() {
+										console.log("correct answer, favorite");
+										score.push(1);
+
+										// Now put in something the add up the score and display the percentage
+
+										// Put something in that will make the border of each id green if correct and red if wrong
+
+										// Put something in that will add a div with the correct anser and an explaination of the answer
+
+								
+									// END OF LST AddEventListener---SUBMIT BUTTON
+										});
+								// END FOR THE NINTH AddEventListener--BUTTON 9
+									});
+							// END FOR THE EIGHTH AddEventListener--BUTTON 8
+								});
 						// END FOR THE SEVENTH AddEventListener--BUTTON 7
 							});
 					// END FOR THE SIXTH AddEventListener--BUTTON 6
