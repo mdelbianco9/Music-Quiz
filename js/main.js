@@ -1,9 +1,9 @@
 // Array to store correct answers
-var score = [0, 0];
+var score = [];
 
 //  Question 1, Ask question and provide input ------------------------ QUESTION 1------------
 var one = document.createElement('div');
-one.id = 'question1'
+one.id = 'r1';
 one.className = 'row';
 var q1 = document.createElement('h1');
 q1.className = 'mojorisin col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
@@ -41,15 +41,17 @@ button1.addEventListener("click", function() {
 	if (input1.value.toLowerCase() == "jim morrison") {
 	score.push(1);
 	console.log(score);
+	
 	} else {
 		score.push(0);
 		console.log(score);
+
 	}
 	button1.style.visibility = "hidden";
 	// Creates a div for question2
 	var two = document.createElement('div');
 	// Gives question 2 an ID to be
-	two.id = 'question2';
+	two.id = 'r2';
 	two.className = 'row';
 	// Creates an h1 to be put iside the div for question2
 	var q2 = document.createElement('h1');
@@ -94,6 +96,7 @@ button1.addEventListener("click", function() {
 	// BS class
 	radio2.className = 'radio';
 	var label2 = document.createElement('label');
+	label2.id = 'label2';
 	// Text node for label
 	var label2_text = document.createTextNode('Red Hot Chilli Pepers');
 	// Create an input element with type = radio
@@ -183,7 +186,7 @@ button1.addEventListener("click", function() {
 		// Creates a div for question3
 		var three = document.createElement('div');
 		// Gives question 2 an ID to be
-		three.id = 'question3';
+		three.id = 'r3';
 		// Creates an h1 to be put iside the div for question2
 		var q3 = document.createElement('h1');
 		// Class name for the h1 to style with CSS
@@ -206,6 +209,7 @@ button1.addEventListener("click", function() {
 		// BS class
 		radio5.className = 'radio';
 		var label5 = document.createElement('label');
+		label5.id = 'label5';
 		// Text node for label
 		var label5_text = document.createTextNode('John Lennon');
 		// Create an input element with type = radio
@@ -313,7 +317,7 @@ button1.addEventListener("click", function() {
 			// Creates a div for question3
 			var four = document.createElement('div');
 			// Gives question 2 an ID to be
-			four.id = 'question4';
+			four.id = 'r4';
 			// Creates an h1 to be put iside the div for question2
 			var q4 = document.createElement('h1');
 			// Class name for the h1 to style with CSS
@@ -334,6 +338,7 @@ button1.addEventListener("click", function() {
 			// BS class
 			radio9.className = 'radio';
 			var label9 = document.createElement('label');
+			label9.id = 'label9';
 			// Text node for label
 			var label9_text = document.createTextNode('True');
 			// Create an input element with type = radio
@@ -397,13 +402,14 @@ button1.addEventListener("click", function() {
 				// Creates a div for question5
 				var five = document.createElement('div');
 				// --ID-- 
-				five.id = 'question5';
+				five.id = 'r5';
 				// --IMG--
 				var album = document.createElement('IMG');
 				album.setAttribute("src", "img/thriller.png");
 			    album.setAttribute("width", "350");
 			    album.setAttribute("height", "350");
 			    album.className = 'thriller_img ';
+			    album.id = 'album';
 			    five.appendChild(album);
 			    
 				// --H3--
@@ -446,7 +452,7 @@ button1.addEventListener("click", function() {
 					// Creates a div for question5
 					var six = document.createElement('div');
 					// --ID-- 
-					six.id = 'question6';
+					six.id = 'r6';
 					// --H1--
 					var q6 = document.createElement('h1');
 					// --CLASS--
@@ -533,6 +539,7 @@ button1.addEventListener("click", function() {
 					// BS class
 					radio13.className = 'radio';
 					var label13 = document.createElement('label');
+					label13.id = 'label13';
 					// Text node for label
 					var label13_text = document.createTextNode('Bob Marley');
 					// Create an input element with type = radio
@@ -594,7 +601,7 @@ button1.addEventListener("click", function() {
 						// Creates a div for question7
 						var seven = document.createElement('div');
 						// Gives question 7 an ID to be
-						seven.id = 'question7';
+						seven.id = 'r7';
 						// Creates an h1 to be put iside the div for question2
 						var q7 = document.createElement('h1');
 						// Class name for the h1 to style with CSS
@@ -615,6 +622,7 @@ button1.addEventListener("click", function() {
 						// BS class
 						radio15.className = 'radio';
 						var label15 = document.createElement('label');
+						label15.id = 'label15';
 						// Text node for label
 						var label15_text = document.createTextNode('True');
 						// Create an input element with type = radio
@@ -676,7 +684,7 @@ button1.addEventListener("click", function() {
 							// Creates a div for question8
 							var eight = document.createElement('div');
 							// --ID-- 
-							eight.id = 'question8';
+							eight.id = 'r8';
 						    
 							// --H1--
 							var q8 = document.createElement('h1');
@@ -707,7 +715,7 @@ button1.addEventListener("click", function() {
 							button8.className = 'btn btn-lg col-md-8 col-sm-8';
 							button8.appendChild(next);
 							button8.addEventListener('click', function() {
-								if (input3.value.toLowerCase() == "kurt cobain") {
+								if (input3.value.toLowerCase() == "kurt cobain" || input3.value.toLowerCase() == "himself") {
 									console.log("correct answer, kurt");
 									score.push(1);
 								} else {
@@ -718,7 +726,7 @@ button1.addEventListener("click", function() {
 								// Creates a div for question3
 								var nine = document.createElement('div');
 								// Gives question 2 an ID to be
-								nine.id = 'question9';
+								nine.id = 'r9';
 								// Creates an h1 to be put iside the div for question2
 								var q9 = document.createElement('h1');
 								// Class name for the h1 to style with CSS
@@ -762,6 +770,7 @@ button1.addEventListener("click", function() {
 								// BS class
 								radio18.className = 'radio';
 								var label18 = document.createElement('label');
+								label18.id = 'label18';
 								// Text node for label
 								var label18_text = document.createTextNode('Drake');
 								// Create an input element with type = radio
@@ -844,7 +853,7 @@ button1.addEventListener("click", function() {
 									// Creates a div for question8
 									var ten = document.createElement('div');
 									// --ID-- 
-									ten.id = 'question8';
+									ten.id = 'r10';
 								    
 									// --H1--
 									var q10 = document.createElement('h1');
@@ -878,8 +887,119 @@ button1.addEventListener("click", function() {
 									submit.addEventListener('click', function() {
 										console.log("correct answer, favorite");
 										score.push(1);
+										// MEGA USEFUL-----FUNCTION TO SUM AN ARRAY
+										var sum = score.reduce(function(a, b) { return a + b; }, 0);
+										console.log(sum);
+										// gives the percentage
+										var total = (sum/10)*100 + "%";
+										console.log(total);
+										// Creates h1 to put score in
+										var yourscore = document.createElement('h1');
+										yourscore.className = ' yourscore col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
+										// text for h1
+										var scoretext = document.createTextNode("Your score is " + total + " Scroll up to see answers");
+										// puts the scor eon the page
+										yourscore.appendChild(scoretext);
+										ten.appendChild(yourscore);
 
-										// Now put in something the add up the score and display the percentage
+										
+										
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[0] == 1) {
+											// adds a class to the element to change its color
+												document.getElementById("r1").classList.add("correct");
+												console.log("correct score value works for 1");											
+											} else {
+											// adds a class to the element to change its color
+												document.getElementById("r1").classList.add("wrong");
+												var jim = document.createTextNode('---Jim Morrison');
+												q1.appendChild(jim);
+												console.log("wrong score value works");
+												};
+										
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[1] == 1) {
+												document.getElementById("r2").classList.add("correct");
+												console.log("correct score value works for 2");
+											} else if (score[1] == 0){
+												document.getElementById("r2").classList.add("wrong");
+												document.getElementById("label2").classList.add("correct");
+												console.log("wrong score value works for 2");								
+												};
+
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[2] == 1) {
+												document.getElementById("r3").classList.add("correct");
+												console.log("correct score value works for 3");
+											} else if (score[2] == 0){
+												document.getElementById("r3").classList.add("wrong");
+												document.getElementById("label5").classList.add("correct");
+												console.log("wrong score value works for 3");
+												};
+
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[3] == 1) {
+												document.getElementById("r4").classList.add("correct");
+												console.log("correct score value works for 4");
+											} else if (score[3] == 0){
+												document.getElementById("r4").classList.add("wrong");
+												document.getElementById("label9").classList.add("correct");
+												console.log("wrong score value works for 4");
+												};
+
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[4] == 1) {
+												document.getElementById("r5").classList.add("correct");
+												document.getElementById("album").classList.add("noblur");
+											} else if (score[4] == 0){
+												document.getElementById("r5").classList.add("wrong");
+												document.getElementById("album").classList.add("noblur");
+												var mike = document.createTextNode('---Thriller by Michael Jackson');
+												q5.appendChild(mike);
+												};
+
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[5] == 1) {
+												document.getElementById("r6").classList.add("correct");
+											} else if (score[5] == 0){
+												document.getElementById("r6").classList.add("wrong");
+												document.getElementById("label13").classList.add("correct");
+
+												};
+
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[6] == 1) {
+												document.getElementById("r7").classList.add("correct");
+											} else if (score[6] == 0){
+												document.getElementById("r7").classList.add("wrong");
+												document.getElementById("label15").classList.add("correct");
+												};
+										
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[7] == 1) {
+												document.getElementById("r8").classList.add("correct");
+											} else if (score[7] == 0){
+												document.getElementById("r8").classList.add("wrong");
+												var kurt = document.createTextNode('---Kurt Cobain');
+												q8.appendChild(kurt);
+												};
+											
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[8] == 1) {
+												document.getElementById("r9").classList.add("correct");
+											} else if (score[8] == 0){
+												document.getElementById("r9").classList.add("wrong");
+												document.getElementById("label18").classList.add("correct");
+												};
+										
+										// checks the value in the array for a 1 or 0 then changes border color of a question
+										if (score[9] == 1) {
+												document.getElementById("r10").classList.add("correct");
+											} else if (score[9] == 0){
+												document.getElementById("r10").classList.add("wrong");
+												};
+
+
 
 										// Put something in that will make the border of each id green if correct and red if wrong
 
@@ -906,7 +1026,6 @@ button1.addEventListener("click", function() {
 		});
 // ---END FOR THE FIRST AddEventListener--BUTTON 1 
 });
-
 
 
 
