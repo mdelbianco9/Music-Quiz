@@ -2,9 +2,11 @@
 var score = [0, 0];
 
 //  Question 1, Ask question and provide input ------------------------ QUESTION 1------------
-var one = document.getElementById('question1');
+var one = document.createElement('div');
+one.id = 'question1'
+one.className = 'row';
 var q1 = document.createElement('h1');
-q1.className = 'mojorisin';
+q1.className = 'mojorisin col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 var q1text = document.createTextNode('1. In The Doors song L.A. Woman, what is the phrase "Mr Mojo Risin" an anagram for?');
 one.appendChild(q1);
 q1.appendChild(q1text);
@@ -13,7 +15,7 @@ q1.appendChild(q1text);
 var input1 = document.createElement("INPUT");
 input1.setAttribute("type", "text");
 // Giving input BS class to style
-input1.className = 'form-control';
+input1.className = 'form-control col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 // Put the input box into the HTML div
 one.appendChild(input1);
 
@@ -23,11 +25,16 @@ window.onload = function() {
 };
 
 
+document.body.appendChild(one);
+
 // Put a button to go to the next question-----------------BUTTON ---Starts a function with other button functions inside
 var button1 = document.createElement('button');
 // Put button1 into the first HTML div
 one.appendChild(button1);
-button1.className = 'btn btn-lg';
+button1.className = 'btn btn-lg col-md-8 col-sm-8';
+// Next button text
+var next = document.createTextNode('Next >>');
+button1.appendChild(next);
 // Add event listener to button so when clicked on it makes question 2------IMPORTANT LINE 
 button1.addEventListener("click", function() {
 	// ADDS 1 TO SCORE IF QUESTION 1 IS CORRECT, ADDS 0 IF WRONG-----------Question 1 Score!!!
@@ -38,14 +45,16 @@ button1.addEventListener("click", function() {
 		score.push(0);
 		console.log(score);
 	}
+	button1.style.visibility = "hidden";
 	// Creates a div for question2
 	var two = document.createElement('div');
 	// Gives question 2 an ID to be
 	two.id = 'question2';
+	two.className = 'row';
 	// Creates an h1 to be put iside the div for question2
 	var q2 = document.createElement('h1');
 	// Class name for the h1 to style with CSS
-	q2.className = 'redhot';
+	q2.className = 'redhot col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 	var q2text = document.createTextNode('2. In their 1983 tour, Which band performed on stage with nothing but socks on their privates?')
 	// Append the h1 elmement into the question2 div
 	two.appendChild(q2);
@@ -56,7 +65,7 @@ button1.addEventListener("click", function() {
 
 	// Create a div element with all the labels in it
 	var lildiv_Q2 = document.createElement('div');
-	lildiv_Q2.className = 'lildiv_Q2';
+	lildiv_Q2.className = 'lildiv_Q2 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 
 	// ---------------------------------------------CREATE LABEL 1------
 	// This is necissary for BS ro work
@@ -152,7 +161,8 @@ button1.addEventListener("click", function() {
 	var button2 = document.createElement('button');
 	// Put button1 into the first HTML div
 	two.appendChild(button2);
-	button2.className = 'btn btn-lg';
+	button2.className = 'btn btn-lg col-md-8 col-sm-8';
+	button2.appendChild(next);
 	// PUT DIV TWO ON TO PAGE
 	document.body.appendChild(two);
 	// Add event listener to button so when clicked on it makes question 2------IMPORTANT LINE	
@@ -168,6 +178,8 @@ button1.addEventListener("click", function() {
 			console.log('wrong answer');
 			score.push(0);
 		}
+		// Hides the previous button
+		button2.style.visibility = "hidden";
 		// Creates a div for question3
 		var three = document.createElement('div');
 		// Gives question 2 an ID to be
@@ -175,7 +187,7 @@ button1.addEventListener("click", function() {
 		// Creates an h1 to be put iside the div for question2
 		var q3 = document.createElement('h1');
 		// Class name for the h1 to style with CSS
-		q3.className = 'imagine';
+		q3.className = 'imagine col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 		var q3text = document.createTextNode('3. Who wrote the famous song "Imagine"? (It goes like this.."imagine all the people, la la la la laaaaa, wohoo woo)')
 		// Append the h1 elmement into the question2 div
 		three.appendChild(q3);
@@ -186,7 +198,7 @@ button1.addEventListener("click", function() {
 
 		// Create a div element with all the labels in it
 		var lildiv_Q3 = document.createElement('div');
-		lildiv_Q3.className = 'lildiv_Q3';
+		lildiv_Q3.className = 'lildiv_Q3 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 
 		// ---------------------------------------------CREATE LABEL 5------
 		// This is necissary for BS ro work
@@ -281,7 +293,8 @@ button1.addEventListener("click", function() {
 		var button3 = document.createElement('button');
 		// Put button1 into the first HTML div
 		three.appendChild(button3);
-		button3.className = 'btn btn-lg';
+		button3.className = 'btn btn-lg col-md-8 col-sm-8';
+		button3.appendChild(next);
 
 		// Add event listener to button so when clicked on it makes question 4------IMPORTANT LINE	
 		// Put a button to go to CREATE BUTTON 3-------------------------BUTTON 3------------
@@ -296,6 +309,7 @@ button1.addEventListener("click", function() {
 				console.log('wrong answer');
 				score.push(0);
 			}
+			button3.style.visibility = 'hidden';
 			// Creates a div for question3
 			var four = document.createElement('div');
 			// Gives question 2 an ID to be
@@ -303,7 +317,7 @@ button1.addEventListener("click", function() {
 			// Creates an h1 to be put iside the div for question2
 			var q4 = document.createElement('h1');
 			// Class name for the h1 to style with CSS
-			q4.className = 'imagine';
+			q4.className = 'jimi col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 			var q4text = document.createTextNode("4. The real name of Jimi Hendrix is actually Johnny Hendrix.")
 			// Append the h1 elmement into the question2 div
 			four.appendChild(q4);
@@ -312,7 +326,7 @@ button1.addEventListener("click", function() {
 
 			// Create a div element with all the labels in it
 			var lildiv_Q4 = document.createElement('div');
-			lildiv_Q4.className = 'lildiv_Q4';
+			lildiv_Q4.className = 'lildiv_Q4 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 
 			// ---------------------------------------------CREATE LABEL 9------True
 			// This is necissary for BS ro work
@@ -364,7 +378,8 @@ button1.addEventListener("click", function() {
 			// Create button to go to question 5--------------------------BeGinInG OF NExT ButTOn 4
 			var button4 = document.createElement('button');
 			four.appendChild(button4);
-			button4.className = 'btn btn-lg';
+			button4.className = 'btn btn-lg col-md-8 col-sm-8';
+			button4.appendChild(next);
 			// Add event listener to button so when clicked on it makes question 5------IMPORTANT LINE	
 			// Put a button to go to CREATE BUTTON 4-------------------------BUTTON 4------------
 			button4.addEventListener("click", function() {
@@ -378,6 +393,7 @@ button1.addEventListener("click", function() {
 					console.log('wrong answer');
 					score.push(0);
 				}
+				button4.style.visibility = 'hidden';
 				// Creates a div for question5
 				var five = document.createElement('div');
 				// --ID-- 
@@ -387,13 +403,13 @@ button1.addEventListener("click", function() {
 				album.setAttribute("src", "img/thriller.png");
 			    album.setAttribute("width", "350");
 			    album.setAttribute("height", "350");
-			    album.className = 'thriller_img';
+			    album.className = 'thriller_img ';
 			    five.appendChild(album);
 			    
 				// --H3--
 				var q5 = document.createElement('h3');
 				// --CLASS--
-				q5.className = 'thriller';
+				q5.className = 'thriller col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 				// --TEXT--
 				var q5text = document.createTextNode('5. What is the name of this album?')
 				// Append the h1 elmement into the question2 div
@@ -405,7 +421,7 @@ button1.addEventListener("click", function() {
 				var input2 = document.createElement("INPUT");
 				input2.setAttribute("type", "text");
 				// Giving input BS class to style
-				input2.className = 'form-control';
+				input2.className = 'form-control col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 				// Put the input box into the HTML div
 				five.appendChild(input2);
 
@@ -414,9 +430,10 @@ button1.addEventListener("click", function() {
 
 				// Create button to go to question 5--------------------------BeGinInG OF NExT ButTOn 5
 				var button5 = document.createElement('button');
+				button5.appendChild(next);
 				// Put button5 into the first HTML div
 				five.appendChild(button5);
-				button5.className = 'btn btn-lg';
+				button5.className = 'btn btn-lg col-md-8 col-sm-8';
 				button5.addEventListener('click', function() {
 					if (input2.value.toLowerCase() == "thriller") {
 						console.log("correct answer, thriller");
@@ -425,6 +442,7 @@ button1.addEventListener("click", function() {
 						console.log("wrog answer");
 						score.push(0);
 					}
+					button5.style.visibility = 'hidden';
 					// Creates a div for question5
 					var six = document.createElement('div');
 					// --ID-- 
@@ -432,12 +450,12 @@ button1.addEventListener("click", function() {
 					// --H1--
 					var q6 = document.createElement('h1');
 					// --CLASS--
-					q6.className = 'bob';
+					q6.className = 'bob col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 					// --TEXT--
 					var q6text = document.createTextNode("6. Who sung these lyrics:")
 					// --H3--holds the lyrics
 					var q6_h3 = document.createElement('h3');
-					q6_h3.className = 'lyrics';
+					q6_h3.className = 'lyrics col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 					// --TEXT- line 1-
 					var line1 = document.createTextNode('"The road of life is rocky');
 					var br = document.createElement('br');
@@ -465,7 +483,7 @@ button1.addEventListener("click", function() {
 
 					// Create a div element with all the labels in it
 					var lildiv_Q6 = document.createElement('div');
-					lildiv_Q6.className = 'lildiv_Q6';
+					lildiv_Q6.className = 'lildiv_Q6 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 
 					// // ---------------------------------------------CREATE LABEL 11------
 					// This is necissary for BS ro work
@@ -558,9 +576,10 @@ button1.addEventListener("click", function() {
 
 					// Create button to go to question 7--------------------------BeGinInG OF NExT ButTOn 6
 					var button6 = document.createElement('button');
+					button6.appendChild(next);
 					// Put button5 into the first HTML div
 					six.appendChild(button6);
-					button6.className = 'btn btn-lg';
+					button6.className = 'btn btn-lg col-md-8 col-sm-8';
 					button6.addEventListener('click', function() {
 						if (label13_input.checked) {
 						console.log('Radio 13 is working, bob');
@@ -571,6 +590,7 @@ button1.addEventListener("click", function() {
 						console.log('wrong answer');
 						score.push(0);
 						}
+						button6.style.visibility = 'hidden';
 						// Creates a div for question7
 						var seven = document.createElement('div');
 						// Gives question 7 an ID to be
@@ -578,7 +598,7 @@ button1.addEventListener("click", function() {
 						// Creates an h1 to be put iside the div for question2
 						var q7 = document.createElement('h1');
 						// Class name for the h1 to style with CSS
-						q7.className = 'imagine';
+						q7.className = 'apple col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 						var q7text = document.createTextNode("7. In the early 80's Apple Computer settled a lawsuit for $80,000 to the Beatles record label, Apple Records on trademark infringement due to Apples Name. True or false?")
 						// Append the h1 elmement into the question2 div
 						seven.appendChild(q7);
@@ -587,7 +607,7 @@ button1.addEventListener("click", function() {
 
 						// Create a div element with all the labels in it
 						var lildiv_Q7 = document.createElement('div');
-						lildiv_Q7.className = 'lildiv_Q7';
+						lildiv_Q7.className = 'lildiv_Q7 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 
 						// ---------------------------------------------CREATE LABEL 15------True
 						// This is necissary for BS ro work
@@ -640,7 +660,8 @@ button1.addEventListener("click", function() {
 						var button7 = document.createElement('button');
 						// Put button5 into the first HTML div
 						seven.appendChild(button7);
-						button7.className = 'btn btn-lg';
+						button7.className = 'btn btn-lg col-md-8 col-sm-8';
+						button7.appendChild(next);
 						button7.addEventListener('click', function() {
 							if (label15_input.checked) {
 							console.log('Radio 15 is working, Apple');
@@ -651,6 +672,7 @@ button1.addEventListener("click", function() {
 							console.log('wrong answer');
 							score.push(0);
 							}
+							button7.style.visibility = 'hidden'
 							// Creates a div for question8
 							var eight = document.createElement('div');
 							// --ID-- 
@@ -659,7 +681,7 @@ button1.addEventListener("click", function() {
 							// --H1--
 							var q8 = document.createElement('h1');
 							// --CLASS--
-							q8.className = 'cobain';
+							q8.className = 'cobain col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 							// --TEXT--
 							var q8text = document.createTextNode('8. Who killed Kurt Cobain?')
 							// Append the h1 elmement into the question2 div
@@ -671,7 +693,7 @@ button1.addEventListener("click", function() {
 							var input3 = document.createElement("INPUT");
 							input3.setAttribute("type", "text");
 							// Giving input BS class to style
-							input3.className = 'form-control';
+							input3.className = 'form-control col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 							// Put the input box into the HTML div
 							eight.appendChild(input3);
 
@@ -682,7 +704,8 @@ button1.addEventListener("click", function() {
 							var button8 = document.createElement('button');
 							// Put button5 into the first HTML div
 							eight.appendChild(button8);
-							button8.className = 'btn btn-lg';
+							button8.className = 'btn btn-lg col-md-8 col-sm-8';
+							button8.appendChild(next);
 							button8.addEventListener('click', function() {
 								if (input3.value.toLowerCase() == "kurt cobain") {
 									console.log("correct answer, kurt");
@@ -691,6 +714,7 @@ button1.addEventListener("click", function() {
 										console.log("wrog answer");
 										score.push(0);
 								}
+								button8.style.visibility = 'hidden';
 								// Creates a div for question3
 								var nine = document.createElement('div');
 								// Gives question 2 an ID to be
@@ -698,7 +722,7 @@ button1.addEventListener("click", function() {
 								// Creates an h1 to be put iside the div for question2
 								var q9 = document.createElement('h1');
 								// Class name for the h1 to style with CSS
-								q9.className = 'drake';
+								q9.className = 'drake col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 								var q9text = document.createTextNode('9. Who was the top listened to artist in 2016?')
 								// Append the h1 elmement into the question2 div
 								nine.appendChild(q9);
@@ -709,7 +733,7 @@ button1.addEventListener("click", function() {
 
 								// Create a div element with all the labels in it
 								var lildiv_Q9 = document.createElement('div');
-								lildiv_Q9.className = 'lildiv_Q9';
+								lildiv_Q9.className = 'lildiv_Q9 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 
 								// ---------------------------------------------------CREATE LABEL 17------
 								// This is necissary for BS ro work
@@ -804,7 +828,8 @@ button1.addEventListener("click", function() {
 								var button9 = document.createElement('button');
 								// Put button5 into the first HTML div
 								nine.appendChild(button9);
-								button9.className = 'btn btn-lg';
+								button9.className = 'btn btn-lg col-md-8 col-sm-8';
+								button9.appendChild(next);
 								button9.addEventListener('click', function() {
 									if (label18_input.checked) {
 									console.log('Radio 18 is working, Drake');
@@ -815,6 +840,7 @@ button1.addEventListener("click", function() {
 									console.log('wrong answer');
 									score.push(0);
 									}
+									button9.style.visibility = 'hidden';
 									// Creates a div for question8
 									var ten = document.createElement('div');
 									// --ID-- 
@@ -823,7 +849,7 @@ button1.addEventListener("click", function() {
 									// --H1--
 									var q10 = document.createElement('h1');
 									// --CLASS--
-									q10.className = 'favorite';
+									q10.className = 'favorite col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 									// --TEXT--
 									var q10text = document.createTextNode('10. What is your favorite musical album?')
 									// Append the h1 elmement into the question2 div
@@ -835,7 +861,7 @@ button1.addEventListener("click", function() {
 									var input4 = document.createElement("INPUT");
 									input4.setAttribute("type", "text");
 									// Giving input BS class to style
-									input4.className = 'form-control';
+									input4.className = 'form-control col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8';
 									// Put the input box into the HTML div
 									ten.appendChild(input4);
 
@@ -846,7 +872,9 @@ button1.addEventListener("click", function() {
 									var submit = document.createElement('button');
 									// Put button5 into the first HTML div
 									ten.appendChild(submit);
-									submit.className = 'btn btn-lg';
+									submit.className = 'btn btn-lg col-md-8 col-sm-8';
+									var submittext = document.createTextNode('Submit');
+									submit.appendChild(submittext);
 									submit.addEventListener('click', function() {
 										console.log("correct answer, favorite");
 										score.push(1);

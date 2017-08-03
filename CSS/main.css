@@ -1,13 +1,174 @@
-.div1 {
-	height: 100px;
-	width: 100%;
-	background-color: blue;
-	border: 2px solid white;
+
+/*Styles all inputs*/
+.form-control {
+	width: 25%;
+	margin-top: 1%;
+	border: 1px solid green;
+	padding: 3%;
+	font-size: larger;
 }
 
-.div2 {
-	height: 200px;
-	width: 100%;
-	background-color: black;
-	border: 4px solid red;
+/*Styles all buttons*/
+.btn {
+	width: 10%;
+	display: block;
+	margin-top: 2%;
+	margin-left: 3%;
+	background-color: #83b27b;
+
 }
+
+.btn:hover {
+	background-color: #99cc8b;
+}
+
+h1, h3 {
+	font-family: 'PT Serif', serif;
+	text-align: left;
+	font-size: x-large;
+}
+
+/*----------------------------------------*/
+
+/*Question 1*/
+#question1 {
+	margin-top: 15%;
+	/*border: 2px solid blue;*/
+	display: block;
+	width: 100%;
+	height: 200px;
+
+
+}
+/*Stlye the question H1*/
+.mojorisin {
+	/*border: 1px solid blue;*/
+	text-align: left;
+	font-size: x-large;
+	display: block;
+	font-family: 'PT Serif', serif;
+}
+
+/*Question 2*/
+#question2 {
+	/*border: 1px solid red;*/
+	margin-top: 15%;
+	margin-bottom: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+
+}
+
+.lildiv_Q2 {
+	display: block;
+	/*border: 1px solid purple;*/
+	width: 25%;
+}
+
+/*Question 3*/
+#question3 {
+	/*border: 1px solid blue;*/
+	margin-top: 15%;
+	margin-bottom: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 300px;
+}
+
+.lildiv_Q3 {
+	width: 25%;
+}
+
+/*Question 4*/
+#question4 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 300px;
+}
+
+.lildiv_Q4 {
+	width: 25%;
+}
+
+/*Question 5*/
+#question5 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 600px;
+}
+
+
+.thriller_img {
+	margin-left: 18%;
+	margin-bottom: 3%;
+	filter: blur(10px);
+}
+
+/*Question 6*/
+#question6 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 300px;
+}
+
+.lildiv_Q6 {
+	width: 25%;
+}
+
+/*Question 7*/
+#question7 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 300px;
+}
+
+.lildiv_Q7 {
+	width: 25%;
+}
+
+/*Question 8*/
+#question8 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 300px;
+}
+
+/*Question 9*/
+
+#question9 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 300px;
+}
+
+.lildiv_Q9 {
+	width: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
